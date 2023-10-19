@@ -8,6 +8,8 @@ const fetBookList = async () => {
 
 const BookList = async () => {
 
+  // status = all , featured
+
     const books = await fetBookList();
     // console.log(books, 'books')
 
@@ -26,6 +28,7 @@ const BookList = async () => {
           <div className="space-y-6 md:space-y-0 md:grid grid-cols-1 lg:grid-cols-3 gap-6">
             {/* <!-- Card 1 --> */}
             {
+                
                 books.map(book => {
                     const {id, name, author, thumbnail, price, rating, featured} = book;
                     return (<div key={id} className="book-card">
